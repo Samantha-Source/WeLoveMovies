@@ -2,9 +2,17 @@ if (process.env.USER) require("dotenv").config();
 const express = require("express");
 const app = express();
 
+// added here but might need to be router level
+const cors = require("cors");  
+//////////
+
 const moviesRouter = require("./movies/movies.router");
 
 app.use(express.json());
+
+// added here but might need to be router level
+app.use(cors());    
+//////////
 
 app.use("/movies", moviesRouter);
 
