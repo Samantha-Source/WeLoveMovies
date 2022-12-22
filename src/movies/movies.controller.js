@@ -1,11 +1,19 @@
 const { response } = require("express");
 const service = require("./movies.service");
- const asyncErrorBoundary = require("../errors/asyncErrorBoundary");
+const asyncErrorBoundary = require("../errors/asyncErrorBoundary");
+
 
 async function list(req, res, next){
+  const showing = req.query.is_showing
+  if(showing){
+    const data = await service.isShowing()
+    res.json({ data:data })
+  } else {
   const data = await service.list()
-  res.json({ data })
+  res.json({ data:data })
+  }
 }
+
 
 async function movieExists(req, res, next){
   const movie = await service.read(req.params.movieId);
@@ -15,6 +23,7 @@ async function movieExists(req, res, next){
   }
   next({status:404, message:`Movie cannot be found.`})
 }
+
 
 async function read(req, res, next){
   const { movieId } = req.params

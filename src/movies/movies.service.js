@@ -1,17 +1,28 @@
 const knex = require("../db/connection");
-// import utility that is needed
+
 
 function list(){
   return knex("movies").select("*");
 };
 
 
+function isShowing(){
+  return knex("movies")
+    .join("movies_theaters", "movies.movie_id", "movies_theaters.movie_id")
+    .select("movies.*", "movies_theaters.is_showing")
+    .where({"movies_theaters.is_showing":true})
+    .groupBy("movies.movie_id")
+}
+
+
+
+
 function read(movieId){
   return knex("movies")
-  .select("*")
-  .where({movie_id:movieId})
-  .first()
-}
+    .select("*")
+    .where({ movie_id: movieId })
+    .first()
+  };
 
 
 
@@ -25,4 +36,5 @@ function read(movieId){
 module.exports = {
   list,
   read,
+  isShowing,
 }
