@@ -17,7 +17,7 @@ app.use(cors());
 //////////
 
 app.use("/movies", moviesRouter);
-app.use("/theaters", theatersRouter)
+app.use("/theaters", theatersRouter);
 app.use("/reviews", reviewsRouter);
 
 
