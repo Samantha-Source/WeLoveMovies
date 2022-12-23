@@ -1,0 +1,25 @@
+node_module/
+.pnp/
+.pnp.js
+
+# testing
+coverage/
+
+#production
+build/
+
+#mist
+.eslintcache
+.DS_store
+.env
+.env.*
+!.env.sample
+.idea/
+.vscode/
+.vercel
+.screenshots/
+.qualified-atttach
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
