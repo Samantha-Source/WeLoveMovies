@@ -30,12 +30,12 @@ function readWithCritic(review_id){
 
 // NEED TO REWORK THIS SO THAT IT ACTS PROPERLY - CHECK DOCS
 const reduceReview = reduceProperties("critic_id", {
-  critic_id: ["critic", null, "critic_id"],
-  preferred_name: ["critic", null, "preferred_name"],
-  surname: ["critic", null, "surname"],
-  organization_name: ["critic", null, "organization_name"],
-  created_at:["critic", null, "created_at"],
-  updated_at: ["critic", null, "updated_at"]
+//   critic_id: ["critic", null, "critic_id"],
+  preferred_name: ["critic", "preferred_name"],
+  surname: ["critic", "surname"],
+  organization_name: ["critic", "organization_name"],
+//   created_at:["critic", null, "created_at"],
+//   updated_at: ["critic", null, "updated_at"]
 })
 
 
