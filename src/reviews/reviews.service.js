@@ -23,19 +23,14 @@ function readWithCritic(review_id){
         .join("critics", "reviews.critic_id", "critics.critic_id")
         .select("*")
         .where({ review_id })
-//         .first()
         .then(reduceReview)
-  
 }
 
-// NEED TO REWORK THIS SO THAT IT ACTS PROPERLY - CHECK DOCS
+
 const reduceReview = reduceProperties("critic_id", {
-//   critic_id: ["critic", null, "critic_id"],
   preferred_name: ["critic", "preferred_name"],
   surname: ["critic", "surname"],
   organization_name: ["critic", "organization_name"],
-//   created_at:["critic", null, "created_at"],
-//   updated_at: ["critic", null, "updated_at"]
 })
 
 
