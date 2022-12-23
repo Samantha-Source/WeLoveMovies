@@ -9,7 +9,7 @@ function list(){
 function isShowing(){
   return knex("movies")
     .join("movies_theaters", "movies.movie_id", "movies_theaters.movie_id")
-    .select("movies.*", "movies_theaters.is_showing")
+    .select("movies.*")
     .where({"movies_theaters.is_showing":true})
     .groupBy("movies.movie_id")
 }
