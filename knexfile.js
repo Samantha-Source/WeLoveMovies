@@ -8,7 +8,6 @@ const {
 } = process.env;
 
 
-
 module.exports = {
   development: {
     client: "postgresql",
