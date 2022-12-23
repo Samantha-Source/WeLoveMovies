@@ -7,14 +7,14 @@ async function reviewExists(req, res, next){
     if(review){
         res.locals.review = review;
         return next();
-    }
+    };
     next({ status: 404, message:`Review with id: ${req.params.reviewId} cannot be found`})
-}
+};
 
 async function destroy(req, res, next){
     await service.delete(res.locals.review.review_id)
     res.sendStatus(204)
-}
+};
 
 async function update(req, res, next){
     
@@ -26,12 +26,12 @@ async function update(req, res, next){
     await service.update(updatedReview)
     const updated = await service.readWithCritic(res.locals.review.review_id)
     res.json({ data: updated[0] })
-}
+};
 
 async function read(req, res, next){
     const data = await service.read(req.params.reviewId);
     res.json({ data })
-}
+};
 
 
 module.exports = {
