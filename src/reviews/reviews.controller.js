@@ -12,8 +12,7 @@ async function reviewExists(req, res, next){
 }
 
 async function destroy(req, res, next){
-    // await service.delete(res.locals.review.review_id)
-    await service.delete(req.params.reviewId);
+    await service.delete(res.locals.review.review_id)
     res.sendStatus(204)
 }
 
@@ -23,8 +22,10 @@ async function update(req, res, next){
         ...req.body.data,
         review_id: res.locals.review.review_id,
     };
-    const response = await service.update(updatedReview)
-    res.json({ data:response })
+  
+    await service.update(updatedReview)
+    const updated = await service.readWithCritic(res.locals.review.review_id)
+    res.json({ data: updated[0] })
 }
 
 async function read(req, res, next){
