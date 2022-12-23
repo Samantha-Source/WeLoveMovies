@@ -24,7 +24,6 @@ async function movieExists(req, res, next){
   next({status:404, message:`Movie cannot be found.`})
 }
 
-
 async function read(req, res, next){
   const { movieId } = req.params
   const data = await service.read(movieId);
@@ -37,8 +36,15 @@ async function readTheaters(req, res, next){
   res.json({ data })
 }
 
+async function readReviews(req, res, next){
+  const data = await service.readReviews(req.params.movieId)
+  res.json({ data })
+}
+
+
 module.exports = {
   list,
   read: [asyncErrorBoundary(movieExists), read],
   readTheaters: [asyncErrorBoundary(movieExists), readTheaters],
+  readReviews: [asyncErrorBoundary(movieExists), readReviews],
 }
