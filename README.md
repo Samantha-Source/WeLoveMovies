@@ -93,10 +93,16 @@
 <!-- GETTING STARTED -->
 ## Getting Started
 
-*  Clone the frontEnd and follow the instructions to get it running. 
+### Do this first:
+
+* Create and connect a DB:
+
+
+*  Clone the front end and follow the instructions to get it running. 
   ```sh
 git clone https://github.com/Samantha-Source/starter-movie-front-end.git
   ```
+
 
 
 ### Installation
@@ -108,6 +114,16 @@ git clone https://github.com/Samantha-Source/starter-movie-front-end.git
 2. Install NPM packages
    ```sh
    npm install
+   ```
+3. Create and connect a Data Base
+  * You can do so for free here: [ElephanSQL](https://www.elephantsql.com/)
+  * Create a .env file in the project folder:
+    ```sh
+      DATABASE_URL = "<Your_data_base_url>"
+    ```
+4. Run
+   ```sh
+   npm start
    ```
 
 
