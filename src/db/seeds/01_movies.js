@@ -7,7 +7,7 @@ exports.seed = function (knex) {
       description:
         "Chihiro and her parents are moving to a small Japanese town in the countryside, much to Chihiro's dismay. On the way to their new home, Chihiro's father makes a wrong turn and drives down a lonely one-lane road which dead-ends in front of a tunnel. Her parents decide to stop the car and explore the area. They go through the tunnel and find an abandoned amusement park on the other side, with its own little town...",
       image_url:
-      "https://www.imdb.com/title/tt0245429/mediaviewer/rm4207852801/?ref_=tt_ov_i",
+      "https://m.media-amazon.com/images/I/51ZsjFzJ6rL._AC_SY580_.jpg",
     },
     {
       title: "Interstellar",
