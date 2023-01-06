@@ -21,11 +21,11 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/samantha-source/WeLoveMovies">
+  <!-- <a href="https://github.com/samantha-source/WeLoveMovies">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
+  </a> -->
 
-<h3 align="center">project_title</h3>
+<h3 align="center">We Love Movies</h3>
 
   <p align="center">
     project_description
@@ -212,8 +212,13 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 [issues-shield]: https://img.shields.io/github/issues/samantha-source/WeLoveMovies.svg?style=for-the-badge
 [issues-url]: https://github.com/samantha-source/WeLoveMovies/issues
 
+<<<<<<< Updated upstream
 [license-shield]: https://img.shields.io/github/license/samantha-source/WeLoveMovies.svg?style=for-the-badge
 [license-url]: https://github.com/Samantha-Source/WeLoveMovies/blob/main/LICENSE.txt
+=======
+[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
+[license-url]: https://github.com/Samantha-Source/WeLoveMovies/blob/main/docs/readme/LICENSE.txt
+>>>>>>> Stashed changes
 
 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
